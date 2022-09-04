@@ -1,6 +1,7 @@
 // src/pages/_app.tsx
+import MainLayout from "src/components/layouts/Main";
 import { withTRPC } from "@trpc/next";
-import type { AppRouter } from "../server/router";
+import type { AppRouter } from "src/server/router";
 import type { AppType } from "next/dist/shared/lib/utils";
 import superjson from "superjson";
 import { SessionProvider } from "next-auth/react";
@@ -12,7 +13,9 @@ const MyApp: AppType = ({
 }) => {
   return (
     <SessionProvider session={session}>
+      <MainLayout>
       <Component {...pageProps} />
+      </MainLayout>
     </SessionProvider>
   );
 };

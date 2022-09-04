@@ -1,10 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { trpc } from "../utils/trpc";
-import { useEffect } from "react";
-import EmailLogo from "../components/icons/EmailLogo";
-import Email from "../../public/icons/Email.svg";
-import Phone from "../../public/icons/Phone.svg";
 
 const Home: NextPage = () => {
   return (
@@ -35,9 +30,6 @@ const Home: NextPage = () => {
 
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
         <h1>Hi</h1>
-        {/*<EmailLogo />*/}
-        <Email />
-        <Phone />
       </main>
     </>
   );
