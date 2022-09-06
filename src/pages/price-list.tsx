@@ -12,7 +12,9 @@ const PriceList: NextPage = () => {
 
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
         <ContentContainer>
-          <span className={"text-2xl font-semibold"}>Прайс-лист</span>
+          <span className={"text-xl md:text-2xl font-semibold"}>
+            Прайс-лист
+          </span>
         </ContentContainer>
       </main>
     </>

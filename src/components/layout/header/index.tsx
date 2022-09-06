@@ -51,25 +51,33 @@ const DropDownMenu: FC = () => {
           <Menu.Item>
             {() => (
               <div className={"flex items-center gap-2 px-4 py-2 "}>
-                <a href="tel:+79999999999">
-                  <Phone className="w-5" />
-                </a>
-                <span
-                  aria-label={"Номер телефона"}
-                  className="text-sm text-black"
+                <a
+                  className={"flex items-center gap-2"}
+                  href="tel:+79999999999"
                 >
-                  +7 (999) 999-99-99
-                </span>
+                  <Phone className="w-5" />
+                  <span
+                    aria-label={"Номер телефона"}
+                    className="text-sm text-black"
+                  >
+                    +7 (999) 999-99-99
+                  </span>
+                </a>
               </div>
             )}
           </Menu.Item>
           <Menu.Item>
             {() => (
               <div className={"flex items-center gap-2 px-4 py-2 "}>
-                <a href="mailto:GazChimOil@mail.com">
+                <a
+                  className={"flex items-center gap-2"}
+                  href="mailto:GazChimOil@mail.com"
+                >
                   <Email className="w-5" />
+                  <span className="text-sm text-black">
+                    GazChimOil@mail.com
+                  </span>
                 </a>
-                <span className="text-sm text-black">GazChimOil@mail.com</span>
               </div>
             )}
           </Menu.Item>
@@ -96,24 +104,24 @@ const Header: FC = () => {
         ) : (
           <div className="flex flex-col gap-1">
             <div className={"flex w-100 gap-2 items-center justify-end"}>
-              <span
-                aria-label={"Номер телефона"}
-                className="font-semibold text-lg text-neutral-500"
-              >
-                +7 (999) 999-99-99
-              </span>
-              <a href="tel:+79999999999">
+              <a href="tel:+79999999999" className={"flex items-center gap-2"}>
+                <span
+                  aria-label={"Номер телефона"}
+                  className="font-semibold text-lg text-neutral-500"
+                >
+                  +7 (999) 999-99-99
+                </span>
                 <Phone className="w-5" />
               </a>
             </div>
             <div className={"flex w-100 gap-2 items-center justify-end"}>
-              <span className="font-semibold text-lg text-neutral-500">
-                GazChimOil@mail.com
-              </span>
               <a
                 href="mailto:GazChimOil@mail.com"
-                className="font-semibold text-lg text-neutral-500"
+                className="font-semibold text-lg flex items-center gap-2 text-neutral-500"
               >
+                <span className="font-semibold text-lg text-neutral-500">
+                  GazChimOil@mail.com
+                </span>
                 <Email className="w-5" />
               </a>
             </div>
