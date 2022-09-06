@@ -2,20 +2,21 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import ContentContainer from "src/components/core/ContentContainer";
 
-const Home: NextPage = () => {
+const Contacts: NextPage = () => {
   return (
     <>
       <Head>
-        <title>ГазХимОил</title>
+        <title>ГазХимОил - контакты</title>
         <meta name="description" content='ООО "ГазХимОил"' />
       </Head>
+
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
         <ContentContainer>
-          <span className={"text-2xl font-semibold"}>Сайт в разработке</span>
+          <span className={"text-2xl font-semibold"}>Контакты</span>
         </ContentContainer>
       </main>
     </>
   );
 };
 
-export default Home;
+export default Contacts;
