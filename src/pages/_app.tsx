@@ -1,7 +1,7 @@
 // src/pages/_app.tsx
-import MainLayout from "src/components/layouts/Main";
+import Head from "next/head";
+import MainLayout from "src/components/layout/layouts/Main";
 import { withTRPC } from "@trpc/next";
-import type { AppRouter } from "src/server/router";
 import type { AppType } from "next/dist/shared/lib/utils";
 import superjson from "superjson";
 import { SessionProvider } from "next-auth/react";
@@ -12,11 +12,17 @@ const MyApp: AppType = ({
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <SessionProvider session={session}>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <MainLayout>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </MainLayout>
-    </SessionProvider>
+    </>
   );
 };
 
@@ -26,25 +32,4 @@ const getBaseUrl = () => {
   return `http://localhost:${process.env.PORT ?? 3000}`; // dev SSR should use localhost
 };
 
-export default withTRPC<AppRouter>({
-  config() {
-    /**
-     * If you want to use SSR, you need to use the server's full URL
-     * @link https://trpc.io/docs/ssr
-     */
-    const url = `${getBaseUrl()}/api/trpc`;
-
-    return {
-      url,
-      transformer: superjson,
-      /**
-       * @link https://react-query.tanstack.com/reference/QueryClient
-       */
-      // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
-    };
-  },
-  /**
-   * @link https://trpc.io/docs/ssr
-   */
-  ssr: false,
-})(MyApp);
+export default MyApp;
