@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { FC, useEffect, useState } from "react";
 
 import background from "public/images/background.png";
+import { FC, useEffect, useState } from "react";
 
 const Background: FC = () => {
   const [width, setWidth] = useState<number>();

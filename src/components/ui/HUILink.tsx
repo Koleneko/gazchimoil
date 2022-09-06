@@ -1,5 +1,5 @@
-import Link, { LinkProps } from "next/link";
-import { ForwardedRef, forwardRef } from "react";
+import Link from "next/link";
+import { forwardRef } from "react";
 
 // eslint-disable-next-line react/display-name
 const MyLink = forwardRef((props, ref) => {

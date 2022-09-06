@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { FC } from "react";
 
 import TitleLogoLight from "public/icons/TitleLogoLight.svg";
+import { FC } from "react";
 import { buttonsInfo } from "src/components/core/navbar/buttons-info";
 
 const Footer: FC = () => {

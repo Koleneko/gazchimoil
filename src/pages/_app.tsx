@@ -1,10 +1,7 @@
 // src/pages/_app.tsx
+import type { AppType } from "next/dist/shared/lib/utils";
 import Head from "next/head";
 import MainLayout from "src/components/layout/layouts/Main";
-import { withTRPC } from "@trpc/next";
-import type { AppType } from "next/dist/shared/lib/utils";
-import superjson from "superjson";
-import { SessionProvider } from "next-auth/react";
 import "../styles/globals.css";
 
 const MyApp: AppType = ({
