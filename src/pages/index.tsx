@@ -11,7 +11,9 @@ const Home: NextPage = () => {
       </Head>
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
         <ContentContainer>
-          <span className={"text-2xl font-semibold"}>Сайт в разработке</span>
+          <span className={"text-xl md:text-2xl font-semibold"}>
+            Сайт в разработке
+          </span>
         </ContentContainer>
       </main>
     </>

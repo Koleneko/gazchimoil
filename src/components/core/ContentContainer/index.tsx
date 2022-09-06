@@ -7,7 +7,7 @@ export interface ContentContainerProps {
 
 const ContentContainer: FC<ContentContainerProps> = ({ children }) => {
   return (
-    <div className="bg-white bg-opacity-90 px-36 py-24 rounded-2xl">
+    <div className="bg-white bg-opacity-90 flex min-w-[80%] justify-center items-center  py-24 rounded-2xl">
       {children}
     </div>
   );
