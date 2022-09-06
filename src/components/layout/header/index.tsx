@@ -120,7 +120,7 @@ const Header: FC = () => {
           </div>
         )}
       </div>
-      {width && width <= 768 && <Navbar />}
+      {width && width >= 768 && <Navbar />}
     </>
   );
 };
