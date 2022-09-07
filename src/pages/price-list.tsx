@@ -6,7 +6,7 @@ const PriceList: NextPage = () => {
   return (
     <>
       <Head>
-        <title>ГазХимОил</title>
+        <title>ГазХимОил • Прайс-лист</title>
         <meta name="description" content='ООО "ГазХимОил"' />
       </Head>
 

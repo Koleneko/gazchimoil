@@ -5,22 +5,22 @@ export const buttonsInfo = [
   },
   {
     title: "Продукция",
-    link: "products",
+    link: "/products",
   },
   {
     title: "Услуги",
-    link: "services",
+    link: "/services",
   },
   {
     title: "Клиентам",
-    link: "customer-info",
+    link: "/customer-info",
   },
   {
     title: "Контакты",
-    link: "contacts",
+    link: "/contacts",
   },
   {
     title: "Прайс-лист",
-    link: "price-list",
+    link: "/price-list",
   },
 ];

@@ -6,7 +6,7 @@ const Products: NextPage = () => {
   return (
     <>
       <Head>
-        <title>ГазХимОил</title>
+        <title>ГазХимОйл • Продукция</title>
         <meta name="description" content='ООО "ГазХимОил"' />
       </Head>
 
