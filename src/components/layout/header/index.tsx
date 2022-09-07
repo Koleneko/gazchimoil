@@ -1,5 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Email from "public/icons/Email.svg";
 import MenuBtn from "public/icons/MenuBtn.svg";
@@ -12,6 +13,8 @@ import MyLink from "src/components/ui/HUILink";
 import useWindowDimensions from "src/hooks/useWindowDimensions";
 
 const DropDownMenu: FC = () => {
+  const { asPath } = useRouter();
+
   return (
     <Menu>
       <Menu.Button className={"w-5"}>
@@ -37,13 +40,13 @@ const DropDownMenu: FC = () => {
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 <MyLink href={button.link} scroll={false}>
-                  <a
-                    className={`${
-                      active ? "bg-slate-300" : ""
-                    } block px-4 py-2 text-sm text-black`}
+                  <span
+                    className={`block px-4 py-2 text-sm text-black focus:bg-neutral-300 hover:bg-neutral-300 ${
+                      (asPath === button.link || active) && "bg-neutral-300"
+                    }`}
                   >
                     {button.title}
-                  </a>
+                  </span>
                 </MyLink>
               )}
             </Menu.Item>
@@ -102,7 +105,7 @@ const Header: FC = () => {
         {width && width <= 768 ? (
           <DropDownMenu />
         ) : (
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 mr-5">
             <div className={"flex w-100 gap-2 items-center justify-end"}>
               <a href="tel:+79999999999" className={"flex items-center gap-2"}>
                 <span

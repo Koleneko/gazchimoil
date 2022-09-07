@@ -10,7 +10,7 @@ const Footer: FC = () => {
       <div className="justify-self-center md:justify-self-auto flex h-100 ">
         <TitleLogoLight className="w-36 md:w-72 cursor-pointer" />
       </div>
-      <div className="flex flex-col gap-4 h-100 ">
+      <div className="flex flex-col gap-4 h-100 grow ">
         <div className="flex flex-wrap justify-center md:divide-x gap-2 items-center">
           {buttonsInfo.map((button) => (
             <div
@@ -33,7 +33,7 @@ const Footer: FC = () => {
           </span>
         </div>
       </div>
-      <div className="flex h-100 "></div>
+      <div className="flex h-100 grow "></div>
     </footer>
   );
 };

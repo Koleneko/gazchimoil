@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>ГазХимОил</title>
+        <title>ГазХимОйл</title>
         <meta name="description" content='ООО "ГазХимОил"' />
       </Head>
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
