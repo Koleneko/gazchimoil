@@ -31,7 +31,7 @@ const DropDownMenu: FC = () => {
       >
         <Menu.Items
           className={
-            'absolute right-0 mt-32 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"'
+            'absolute inset right-0 top-0 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"'
           }
         >
           {buttonsInfo.map((button) => (
