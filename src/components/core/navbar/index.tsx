@@ -6,10 +6,6 @@ import { buttonsInfo } from "src/components/core/navbar/buttons-info";
 const Navbar: FC = () => {
   const router = useRouter();
 
-  useEffect(() => {
-    console.log(router.pathname === "/contacts");
-  }, [router.pathname]);
-
   return (
     <nav
       className="hidden md:flex w-full p-4 sticky top-0 bg-primary items-center justify-center"
