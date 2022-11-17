@@ -56,14 +56,14 @@ const DropDownMenu: FC = () => {
               <div className={"flex items-center gap-2 px-4 py-2 "}>
                 <a
                   className={"flex items-center gap-2"}
-                  href="tel:+79999999999"
+                  href="tel:+79255472262"
                 >
                   <Phone className="w-5" />
                   <span
                     aria-label={"Номер телефона"}
                     className="text-sm text-black"
                   >
-                    +7 (999) 999-99-99
+                    +7 (925) 547-22-62
                   </span>
                 </a>
               </div>
@@ -74,12 +74,10 @@ const DropDownMenu: FC = () => {
               <div className={"flex items-center gap-2 px-4 py-2 "}>
                 <a
                   className={"flex items-center gap-2"}
-                  href="mailto:GazChimOil@mail.com"
+                  href="mailto:info@gazchemoil.ru"
                 >
                   <Email className="w-5" />
-                  <span className="text-sm text-black">
-                    GazChimOil@mail.com
-                  </span>
+                  <span className="text-sm text-black">info@gazchemoil.ru</span>
                 </a>
               </div>
             )}
@@ -107,23 +105,23 @@ const Header: FC = () => {
         ) : (
           <div className="flex flex-col gap-1 mr-5">
             <div className={"flex w-100 gap-2 items-center justify-end"}>
-              <a href="tel:+79999999999" className={"flex items-center gap-2"}>
+              <a href="tel:+79255472262" className={"flex items-center gap-2"}>
                 <span
                   aria-label={"Номер телефона"}
                   className="font-semibold text-lg text-neutral-500"
                 >
-                  +7 (999) 999-99-99
+                  +7 (925) 547-22-62
                 </span>
                 <Phone className="w-5" />
               </a>
             </div>
             <div className={"flex w-100 gap-2 items-center justify-end"}>
               <a
-                href="mailto:GazChimOil@mail.com"
+                href="mailto:info@gazchemoil.ru"
                 className="font-semibold text-lg flex items-center gap-2 text-neutral-500"
               >
                 <span className="font-semibold text-lg text-neutral-500">
-                  GazChimOil@mail.com
+                  info@gazchemoil.ru
                 </span>
                 <Email className="w-5" />
               </a>
