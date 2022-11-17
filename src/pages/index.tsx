@@ -1,12 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { getBaseUrl } from "src/pages/_app";
 
 const Home: NextPage = () => {
+  const imageUrl = `${getBaseUrl()}/api/og?title=Hello%20World`;
+
   return (
     <>
       <Head>
         <title>ГазХимОйл</title>
         <meta name="description" content='ООО "ГазХимОил"' />
+        <meta property="og:image" content={imageUrl} />
       </Head>
       <main className=" w-full h-full md:container mx-auto flex flex-col md:py-10 items-center justify-center min-h-screen gap-4">
         <section className="bg-white text-justify bg-opacity-90 flex gap-4 pb-2 md:py-10 py-2 px-4 md:px-10 flex-col justify-center items-center  md:rounded-2xl">
