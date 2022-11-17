@@ -28,6 +28,7 @@ export default function Document() {
           href="/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicons/site.webmanifest" />
+        <meta name="yandex-verification" content="95ad44887e183487" />
       </Head>
       <body className={""}>
         <Main />
