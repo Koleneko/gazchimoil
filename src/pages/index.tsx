@@ -1,9 +1,13 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { getBaseUrl } from "src/pages/_app";
 
-const Home: NextPage = () => {
-  const imageUrl = `${getBaseUrl()}/api/og?title=Hello%20World`;
+export interface HomePageProps {
+  baseUrl: string;
+}
+
+const Home: NextPage<HomePageProps> = ({ baseUrl }) => {
+  const imageUrl = `${baseUrl}/api/og?title=Hello%20World`;
 
   return (
     <>
@@ -73,6 +77,16 @@ const Home: NextPage = () => {
       </main>
     </>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const baseUrl = getBaseUrl();
+
+  return {
+    props: {
+      baseUrl,
+    },
+  };
 };
 
 export default Home;
