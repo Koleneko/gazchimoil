@@ -6,7 +6,11 @@ import { buttonsInfo } from "src/components/core/navbar/buttons-info";
 
 const Footer: FC = () => {
   return (
-    <footer className="bg-neutral-500 w-100 flex items-center flex-col px-5 md:flex-row py-10">
+    <footer
+      className={
+        "bg-neutral-500 w-100 flex flex-col items-center md:grid md:grid-cols-footer px-5  py-10"
+      }
+    >
       <div className="justify-self-center md:justify-self-auto flex h-100 ">
         <TitleLogoLight className="w-36 md:w-72 cursor-pointer" />
       </div>
@@ -32,7 +36,6 @@ const Footer: FC = () => {
           </p>
         </div>
       </div>
-      <div className="flex h-100 grow "></div>
     </footer>
   );
 };
