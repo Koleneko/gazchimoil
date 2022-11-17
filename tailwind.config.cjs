@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       colors: {
         "primary": "#17B6C0"
+      },
+      gridTemplateColumns: {
+        'footer': "1fr auto 1fr"
       }
     },
   },
